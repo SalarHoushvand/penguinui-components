@@ -1,5 +1,5 @@
-<div x-data="{ currentVal: 20 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return (((val-min)/(max-min))*100).toFixed(0)} }" class="flex h-4 w-full overflow-hidden rounded-md bg-neutral-50 dark:bg-neutral-900" role="progressbar" aria-label="default progress bar" :aria-valuenow="currentVal" :aria-valuemin="minVal" :aria-valuemax="maxVal">
-    <div class="h-full rounded-md bg-black p-0.5 text-center text-xs font-semibold leading-none text-neutral-100 dark:bg-white dark:text-black" :style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`">
+<div x-data="{ currentVal: 20 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return (((val-min)/(max-min))*100).toFixed(0)} }" class="flex h-4 w-full overflow-hidden rounded-radius bg-surface-alt dark:bg-surface-dark-alt" role="progressbar" aria-label="default progress bar" x-bind:aria-valuenow="currentVal" x-bind:aria-valuemin="minVal" x-bind:aria-valuemax="maxVal">
+    <div class="h-full rounded-radius bg-primary p-0.5 text-center text-xs font-semibold leading-none text-on-primary dark:bg-primary-dark dark:text-on-primary-dark" x-bind:style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`">
         <span x-text="`${calcPercentage(minVal, maxVal, currentVal)}%`"></span>
     </div>
 </div>

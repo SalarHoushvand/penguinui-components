@@ -1,0 +1,56 @@
+<div class="flex flex-col gap-4 w-fit">
+    <!-- User's Chat -->
+    <div class="w-full max-w-2xl border-outline bg-surface-alt p-6 text-left dark:border-outline-dark dark:bg-surface-dark-alt rounded-radius border" >
+        <div class="flex items-center gap-2 text-on-surface-strong dark:text-on-surface-dark-strong">
+            <img src="https://penguinui.s3.amazonaws.com/component-assets/avatar-8.webp" class="size-8 rounded-full object-cover" alt="User avatar"/>
+            <span class="text-sm font-bold">Alice Brown</span>
+        </div>
+        <p class="text-pretty sm:pl-10 mt-4 sm:mt-0 text-sm text-on-surface dark:text-on-surface-dark">what is a developer?</p>
+        <!-- Actions -->
+        <div class="mt-2 flex items-center gap-2 sm:pl-10">
+            <button class="rounded-full p-1 text-on-surface/75 hover:bg-surface-dark/10 hover:text-on-surface focus:outline-hidden focus-visible:text-on-surface focus-visible:outline-offset-0 focus-visible:outline-primary active:bg-surface-dark/5 active:-outline-offset-2 dark:text-on-surface-dark/75 dark:hover:bg-surface/10 dark:hover:text-on-surface-dark dark:focus-visible:text-on-surface-dark dark:focus-visible:outline-primary-dark dark:active:bg-surface/5" title="Edit" aria-label="Edit your input">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="size-4" >
+                    <path d="m5.433 13.917 1.262-3.155A4 4 0 0 1 7.58 9.42l6.92-6.918a2.121 2.121 0 0 1 3 3l-6.92 6.918c-.383.383-.84.685-1.343.886l-3.154 1.262a.5.5 0 0 1-.65-.65Z"/>
+                    <path d="M3.5 5.75c0-.69.56-1.25 1.25-1.25H10A.75.75 0 0 0 10 3H4.75A2.75 2.75 0 0 0 2 5.75v9.5A2.75 2.75 0 0 0 4.75 18h9.5A2.75 2.75 0 0 0 17 15.25V10a.75.75 0 0 0-1.5 0v5.25c0 .69-.56 1.25-1.25 1.25h-9.5c-.69 0-1.25-.56-1.25-1.25v-9.5Z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <p class="text-sm text-center text-on-surface dark:text-on-surface-dark">Which response do you prefer?</p>
+
+    <!-- AI's Response -->
+    <div class="flex w-full max-w-2xl gap-4 overflow-x-auto pb-4">
+        <!-- Response 1 -->
+        <div class="w-full min-w-[80%] md:min-w-0 border-outline bg-surface-alt p-6 text-left dark:border-outline-dark dark:bg-surface-dark-alt rounded-radius border" >
+            <div class="flex items-center gap-2 text-on-surface-strong dark:text-on-surface-dark-strong">
+                <span class="flex size-8 items-center justify-center rounded-full bg-primary text-on-primary dark:bg-primary-dark dark:text-on-primary-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" class="size-5">
+                        <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.6 26.6 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.93.93 0 0 1-.765.935c-.845.147-2.34.346-4.235.346s-3.39-.2-4.235-.346A.93.93 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a25 25 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25 25 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135" />
+                        <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5" />
+                    </svg>
+                </span>
+                <span class="text-sm font-bold">Response 1</span>
+            </div>
+            <p class="text-pretty sm:pl-10 mt-4 sm:mt-0 text-sm text-on-surface dark:text-on-surface-dark">
+                A magician who turns caffeine into code, pizza into programs, and stress into syntax errors.
+            </p>
+        </div>
+
+        <!-- Response 2 -->
+        <div class="w-full min-w-[80%] md:min-w-0 border-outline bg-surface-alt p-6 text-left dark:border-outline-dark dark:bg-surface-dark-alt rounded-radius border" >
+            <div class="flex items-center gap-2 text-on-surface-strong dark:text-on-surface-dark-strong">
+                <span class="flex size-8 items-center justify-center rounded-full bg-primary text-on-primary dark:bg-primary-dark dark:text-on-primary-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" class="size-5">
+                        <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.6 26.6 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.93.93 0 0 1-.765.935c-.845.147-2.34.346-4.235.346s-3.39-.2-4.235-.346A.93.93 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a25 25 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25 25 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135" />
+                        <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5" />
+                    </svg>
+                </span>
+                <span class="text-sm font-bold">Response 2</span>
+            </div>
+            <p class="text-pretty sm:pl-10 mt-4 sm:mt-0 text-sm text-on-surface dark:text-on-surface-dark">
+                Someone who talks to computers in their own language and occasionally gets a response.
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,23 +1,24 @@
-<div x-data="{ currentVal: 70 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-md bg-neutral-50 dark:bg-neutral-900" role="progressbar" aria-label="default progress bar" :aria-valuenow="currentVal" :aria-valuemin="minVal" :aria-valuemax="maxVal">
-    <div class="h-full rounded-md bg-gradient-to-r from-yellow-400 to-lime-400" :style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`"></div>
+<div x-data="{ currentVal: 70 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-radius bg-surface-alt dark:bg-surface-dark-alt" role="progressbar" aria-label="default progress bar" x-bind:aria-valuenow="currentVal" x-bind:aria-valuemin="minVal" x-bind:aria-valuemax="maxVal">
+    <div class="h-full rounded-radius bg-linear-to-r from-yellow-400 to-lime-400" x-bind:style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`"></div>
 </div>
 
-<div x-data="{ currentVal: 70 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-md bg-neutral-50 dark:bg-neutral-900" role="progressbar" aria-label="default progress bar" :aria-valuenow="currentVal" :aria-valuemin="minVal" :aria-valuemax="maxVal">
-    <div class="h-full rounded-md bg-gradient-to-r from-green-500 to-green-700" :style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`"></div>
+<div x-data="{ currentVal: 70 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-radius bg-surface-alt dark:bg-surface-dark-alt" role="progressbar" aria-label="default progress bar" x-bind:aria-valuenow="currentVal" x-bind:aria-valuemin="minVal" x-bind:aria-valuemax="maxVal">
+    <div class="h-full rounded-radius bg-linear-to-r from-green-500 to-green-700" x-bind:style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`"></div>
 </div>
 
-<div x-data="{ currentVal: 70 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-md bg-neutral-50 dark:bg-neutral-900" role="progressbar" aria-label="default progress bar" :aria-valuenow="currentVal" :aria-valuemin="minVal" :aria-valuemax="maxVal">
-    <div class="h-full rounded-md bg-gradient-to-r from-indigo-500 to-blue-500" :style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`"></div>
+<div x-data="{ currentVal: 70 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-radius bg-surface-alt dark:bg-surface-dark-alt" role="progressbar" aria-label="default progress bar" x-bind:aria-valuenow="currentVal" x-bind:aria-valuemin="minVal" x-bind:aria-valuemax="maxVal">
+    <div class="h-full rounded-radius bg-linear-to-r from-indigo-500 to-blue-500" x-bind:style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`"></div>
 </div>
 
-<div x-data="{ currentVal: 70 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-md bg-neutral-50 dark:bg-neutral-900" role="progressbar" aria-label="default progress bar" :aria-valuenow="currentVal" :aria-valuemin="minVal" :aria-valuemax="maxVal">
-    <div class="h-full rounded-md bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500" :style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`"></div>
+<div x-data="{ currentVal: 70 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-radius bg-surface-alt dark:bg-surface-dark-alt" role="progressbar" aria-label="default progress bar" x-bind:aria-valuenow="currentVal" x-bind:aria-valuemin="minVal" x-bind:aria-valuemax="maxVal">
+    <div class="h-full rounded-radius bg-linear-to-r from-rose-400 via-fuchsia-500 to-indigo-500" x-bind:style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`"></div>
 </div>
 
-<div x-data="{ currentVal: 70 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-md bg-neutral-50 dark:bg-neutral-900" role="progressbar" aria-label="default progress bar" :aria-valuenow="currentVal" :aria-valuemin="minVal" :aria-valuemax="maxVal">
-    <div class="h-full rounded-md bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400" :style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`"></div>
+<div x-data="{ currentVal: 70 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-radius bg-surface-alt dark:bg-surface-dark-alt" role="progressbar" aria-label="default progress bar" x-bind:aria-valuenow="currentVal" x-bind:aria-valuemin="minVal" x-bind:aria-valuemax="maxVal">
+    <div class="h-full rounded-radius bg-linear-to-r from-fuchsia-500 via-red-600 to-orange-400" x-bind:style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`"></div>
 </div>
 
-<div x-data="{ currentVal: 70 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-md bg-neutral-50 dark:bg-neutral-900" role="progressbar" aria-label="default progress bar" :aria-valuenow="currentVal" :aria-valuemin="minVal" :aria-valuemax="maxVal">
-    <div class="h-full rounded-md bg-gradient-to-r from-pink-500 to-rose-500" :style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`"></div>
+<div x-data="{ currentVal: 70 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-radius bg-surface-alt dark:bg-surface-dark-alt" role="progressbar" aria-label="default progress bar" x-bind:aria-valuenow="currentVal" x-bind:aria-valuemin="minVal" x-bind:aria-valuemax="maxVal">
+    <div class="h-full rounded-radius bg-linear-to-r from-pink-500 to-rose-500" x-bind:style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`"></div>
 </div>
+

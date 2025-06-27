@@ -1,0 +1,59 @@
+<div class="flex max-w-sm flex-col gap-4 border-outline bg-surface-alt p-6 text-on-surface dark:border-outline-dark dark:bg-surface-dark-alt dark:text-on-surface-dark rounded-radius border">
+    <span id="voiceToneTitle" class="w-fit pl-0.5 text-sm font-medium">Image Style</span>
+    <div class="grid grid-cols-3 place-content-center gap-4" role="group" aria-label="image style">
+        <label for="imageStyleCustom" class="text-cente relative flex flex-col items-center">
+            <input type="file" id="imageStyleCustom" class="peer fixed opacity-0 size-0 appearance-none"/>
+            <div class="flex h-full w-full items-center justify-center border border-dashed border-on-surface peer-focus:outline-2 peer-focus:outline-offset-2 peer-focus:outline-primary dark:border-on-surface-dark dark:peer-focus:outline-primary-dark rounded-radius">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="size-10">
+                    <path fill-rule="evenodd" d="M10.5 3.75a6 6 0 0 0-5.98 6.496A5.25 5.25 0 0 0 6.75 20.25H18a4.5 4.5 0 0 0 2.206-8.423 3.75 3.75 0 0 0-4.133-4.303A6.001 6.001 0 0 0 10.5 3.75Zm2.03 5.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l1.72-1.72v4.94a.75.75 0 0 0 1.5 0v-4.94l1.72 1.72a.75.75 0 1 0 1.06-1.06l-3-3Z" clip-rule="evenodd"/>
+                </svg>
+            </div>
+            <span class="mt-1 text-xs capitalize">Upload</span>
+        </label>
+
+        <label for="imageStyleReal" class="text-center relative flex flex-col items-center" >
+            <input id="imageStyleReal" type="radio" class="peer appearance-none size-0" value="real" name="imageStyle" checked />
+            <img src="https://penguinui.s3.amazonaws.com/component-assets/image-styles/real.webp" class="object-cover rounded-radius peer-focus:outline-2 peer-focus:outline-offset-2 peer-focus:outline-primary dark:peer-focus:outline-primary-dark" alt="real" aria-hidden="true"/>
+            <span class="mt-1 text-xs capitalize">real</span>
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" class="absolute right-1 top-1 size-5 fill-surface opacity-0 peer-checked:opacity-100 dark:fill-surface-dark" >
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm3.844-8.791a.75.75 0 0 0-1.188-.918l-3.7 4.79-1.649-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043l4.25-5.5Z" clip-rule="evenodd" />
+            </svg>
+        </label>
+
+        <label for="imageStyleWatercolor" class="text-center relative flex flex-col items-center" >
+            <input id="imageStyleWatercolor" type="radio" class="peer appearance-none size-0" value="watercolor" name="imageStyle" />
+            <img src="https://penguinui.s3.amazonaws.com/component-assets/image-styles/watercolor.webp" class="object-cover rounded-radius peer-focus:outline-2 peer-focus:outline-offset-2 peer-focus:outline-primary dark:peer-focus:outline-primary-dark" alt="watercolor" aria-hidden="true"/>
+            <span class="mt-1 text-xs capitalize">watercolor</span>
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" class="absolute right-1 top-1 size-5 fill-surface opacity-0 peer-checked:opacity-100 dark:fill-surface-dark" >
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm3.844-8.791a.75.75 0 0 0-1.188-.918l-3.7 4.79-1.649-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043l4.25-5.5Z" clip-rule="evenodd" />
+            </svg>
+        </label>
+
+        <label for="imageStyle3d" class="text-center relative flex flex-col items-center" >
+            <input id="imageStyle3d" type="radio" class="peer appearance-none size-0" value="3d" name="imageStyle" />
+            <img src="https://penguinui.s3.amazonaws.com/component-assets/image-styles/3d.webp" class="object-cover rounded-radius peer-focus:outline-2 peer-focus:outline-offset-2 peer-focus:outline-primary dark:peer-focus:outline-primary-dark" alt="3d" aria-hidden="true"/>
+            <span class="mt-1 text-xs capitalize">3d</span>
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" class="absolute right-1 top-1 size-5 fill-surface opacity-0 peer-checked:opacity-100 dark:fill-surface-dark" >
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm3.844-8.791a.75.75 0 0 0-1.188-.918l-3.7 4.79-1.649-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043l4.25-5.5Z" clip-rule="evenodd" />
+            </svg>
+        </label>
+
+        <label for="imageStyleIsometric" class="text-center relative flex flex-col items-center" >
+            <input id="imageStyleIsometric" type="radio" class="peer appearance-none size-0" value="isometric" name="imageStyle" />
+            <img src="https://penguinui.s3.amazonaws.com/component-assets/image-styles/isometric.webp" class="object-cover rounded-radius peer-focus:outline-2 peer-focus:outline-offset-2 peer-focus:outline-primary dark:peer-focus:outline-primary-dark" alt="isometric" aria-hidden="true"/>
+            <span class="mt-1 text-xs capitalize">isometric</span>
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" class="absolute right-1 top-1 size-5 fill-surface opacity-0 peer-checked:opacity-100 dark:fill-surface-dark" >
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm3.844-8.791a.75.75 0 0 0-1.188-.918l-3.7 4.79-1.649-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043l4.25-5.5Z" clip-rule="evenodd" />
+            </svg>
+        </label>
+
+        <label for="imageStyleFlat" class="text-center relative flex flex-col items-center" >
+            <input id="imageStyleFlat" type="radio" class="peer appearance-none size-0" value="flat" name="imageStyle" />
+            <img src="https://penguinui.s3.amazonaws.com/component-assets/image-styles/flat.webp" class="object-cover rounded-radius peer-focus:outline-2 peer-focus:outline-offset-2 peer-focus:outline-primary dark:peer-focus:outline-primary-dark" alt="flat" aria-hidden="true"/>
+            <span class="mt-1 text-xs capitalize">flat</span>
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" class="absolute right-1 top-1 size-5 fill-surface opacity-0 peer-checked:opacity-100 dark:fill-surface-dark" >
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm3.844-8.791a.75.75 0 0 0-1.188-.918l-3.7 4.79-1.649-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043l4.25-5.5Z" clip-rule="evenodd" />
+            </svg>
+        </label>
+    </div>
+</div>

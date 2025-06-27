@@ -1,17 +1,17 @@
 <!-- success Modal -->
 <div x-data="{ successModalIsOpen: false }">
-    <button @click="successModalIsOpen = true" type="button" class="w-36 cursor-pointer whitespace-nowrap rounded-md bg-green-500 px-4 py-2 text-center text-sm font-medium tracking-wide text-white transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500 active:opacity-100 active:outline-offset-0">Success Modal</button>
-    <div x-cloak x-show="successModalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="successModalIsOpen" @keydown.esc.window="successModalIsOpen = false" @click.self="successModalIsOpen = false" class="fixed inset-0 z-30 flex items-end justify-center bg-black/20 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
+    <button x-on:click="successModalIsOpen = true" type="button" class="w-36 border border-success whitespace-nowrap rounded-radius bg-success px-4 py-2 text-center text-sm font-medium tracking-wide text-on-success transition hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-success active:opacity-100 active:outline-offset-0">Success Modal</button>
+    <div x-cloak x-show="successModalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="successModalIsOpen" x-on:keydown.esc.window="successModalIsOpen = false" x-on:click.self="successModalIsOpen = false" class="fixed inset-0 z-30 flex items-end justify-center bg-black/20 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
         <!-- Modal Dialog -->
-        <div x-show="successModalIsOpen" x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity" x-transition:enter-start="opacity-0 scale-50" x-transition:enter-end="opacity-100 scale-100" class="flex max-w-lg flex-col gap-4 overflow-hidden rounded-md border border-neutral-300 bg-white text-neutral-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">
+        <div x-show="successModalIsOpen" x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity" x-transition:enter-start="opacity-0 scale-50" x-transition:enter-end="opacity-100 scale-100" class="flex max-w-lg flex-col gap-4 overflow-hidden rounded-radius border border-outline bg-surface text-on-surface dark:border-outline-dark dark:bg-surface-dark-alt dark:text-on-surface-dark">
             <!-- Dialog Header -->
-            <div class="flex items-center justify-between border-b border-neutral-300 bg-neutral-50/60 px-4 py-2 dark:border-neutral-700 dark:bg-neutral-950/20">
-                <div class="flex items-center justify-center rounded-full bg-green-500/20 text-green-500 p-1">
+            <div class="flex items-center justify-between border-b border-outline bg-surface-alt/60 px-4 py-2 dark:border-outline-dark dark:bg-surface-dark/20">
+                <div class="flex items-center justify-center rounded-full bg-success/20 text-success p-1">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6" aria-hidden="true">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" />
                     </svg>
                 </div>
-                <button @click="successModalIsOpen = false" aria-label="close modal">
+                <button x-on:click="successModalIsOpen = false" aria-label="close modal">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" stroke="currentColor" fill="none" stroke-width="1.4" class="w-5 h-5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
@@ -19,12 +19,12 @@
             </div>
             <!-- Dialog Body -->
             <div class="px-4 text-center"> 
-                <h3 id="successModalTitle" class="mb-2 font-semibold tracking-wide text-neutral-900 dark:text-white">Transaction Complete</h3>
+                <h3 id="successModalTitle" class="mb-2 font-semibold tracking-wide text-on-surface-strong dark:text-on-surface-dark-strong">Transaction Complete</h3>
                 <p>Your funds transfer was successful. Check your balance for confirmation.</p>
             </div>
             <!-- Dialog Footer -->
-            <div class="flex items-center justify-center border-neutral-300 p-4 dark:border-neutral-700">
-                <button @click="successModalIsOpen = false" type="button" class="w-full cursor-pointer whitespace-nowrap rounded-md bg-green-500 px-4 py-2 text-center text-sm font-semibold tracking-wide text-white transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500 active:opacity-100 active:outline-offset-0">Go to My Balance</button>
+            <div class="flex items-center justify-center border-outline p-4 dark:border-outline-dark">
+                <button x-on:click="successModalIsOpen = false" type="button" class="w-full whitespace-nowrap rounded-radius border border-success bg-success px-4 py-2 text-center text-sm font-semibold tracking-wide text-on-success transition hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-success active:opacity-100 active:outline-offset-0">Go to My Balance</button>
             </div>
         </div>
     </div>
@@ -32,18 +32,18 @@
 
 <!-- info Modal -->
 <div x-data="{ infoModalIsOpen: false }">
-    <button @click="infoModalIsOpen = true" type="button" class="w-36 cursor-pointer whitespace-nowrap rounded-md bg-sky-500 px-4 py-2 text-center text-sm font-medium tracking-wide text-white transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 active:opacity-100 active:outline-offset-0">Info Modal</button>
-    <div x-cloak x-show="infoModalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="infoModalIsOpen" @keydown.esc.window="infoModalIsOpen = false" @click.self="infoModalIsOpen = false" class="fixed inset-0 z-30 flex items-end justify-center bg-black/20 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle">
+    <button x-on:click="infoModalIsOpen = true" type="button" class="w-36 border border-info whitespace-nowrap rounded-radius bg-info px-4 py-2 text-center text-sm font-medium tracking-wide text-on-info transition hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-info active:opacity-100 active:outline-offset-0">Info Modal</button>
+    <div x-cloak x-show="infoModalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="infoModalIsOpen" x-on:keydown.esc.window="infoModalIsOpen = false" x-on:click.self="infoModalIsOpen = false" class="fixed inset-0 z-30 flex items-end justify-center bg-black/20 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle">
         <!-- Modal Dialog -->
-        <div x-show="infoModalIsOpen" x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity" x-transition:enter-start="opacity-0 scale-50" x-transition:enter-end="opacity-100 scale-100" class="flex max-w-lg flex-col gap-4 overflow-hidden rounded-md border border-neutral-300 bg-white text-neutral-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">
+        <div x-show="infoModalIsOpen" x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity" x-transition:enter-start="opacity-0 scale-50" x-transition:enter-end="opacity-100 scale-100" class="flex max-w-lg flex-col gap-4 overflow-hidden rounded-radius border border-outline bg-surface text-on-surface dark:border-outline-dark dark:bg-surface-dark-alt dark:text-on-surface-dark">
             <!-- Dialog Header -->
-            <div class="flex items-center justify-between border-b border-neutral-300 bg-neutral-50/60 px-4 py-2 dark:border-neutral-700 dark:bg-neutral-950/20">
-                <div class="flex items-center justify-center rounded-full bg-sky-500/20 text-sky-500 p-1">
+            <div class="flex items-center justify-between border-b border-outline bg-surface-alt/60 px-4 py-2 dark:border-outline-dark dark:bg-surface-dark/20">
+                <div class="flex items-center justify-center rounded-full bg-info/20 text-info p-1">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6" aria-hidden="true">
                         <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z" clip-rule="evenodd" />
                     </svg>
                 </div>
-                <button @click="infoModalIsOpen = false" aria-label="close modal">
+                <button x-on:click="infoModalIsOpen = false" aria-label="close modal">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" stroke="currentColor" fill="none" stroke-width="1.4" class="w-5 h-5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
@@ -51,12 +51,12 @@
             </div>
             <!-- Dialog Body -->
             <div class="px-4 text-center"> 
-                <h3 id="infoModalTitle" class="mb-2 font-semibold tracking-wide text-neutral-900 dark:text-white">New Update Available</h3>
+                <h3 id="infoModalTitle" class="mb-2 font-semibold tracking-wide text-on-surface-strong dark:text-on-surface-dark-strong">New Update Available</h3>
                 <p>A new version of the application is ready for download. Enhance your experience with the latest features and improvements.</p>
             </div>
             <!-- Dialog Footer -->
-            <div class="flex items-center justify-center border-neutral-300 p-4 dark:border-neutral-700">
-                <button @click="infoModalIsOpen = false" type="button" class="w-full cursor-pointer whitespace-nowrap rounded-md bg-sky-500 px-4 py-2 text-center text-sm font-semibold tracking-wide text-white transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 active:opacity-100 active:outline-offset-0">Install Updates Now</button>
+            <div class="flex items-center justify-center border-outline p-4 dark:border-outline-dark">
+                <button x-on:click="infoModalIsOpen = false" type="button" class="w-full whitespace-nowrap rounded-radius border border-info bg-info px-4 py-2 text-center text-sm font-semibold tracking-wide text-on-info transition hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-info active:opacity-100 active:outline-offset-0">Install Updates Now</button>
             </div>
         </div>
     </div>
@@ -64,18 +64,18 @@
 
 <!-- warning Modal -->
 <div x-data="{ warningModalIsOpen: false }">
-    <button @click="warningModalIsOpen = true" type="button" class="w-36 cursor-pointer whitespace-nowrap rounded-md bg-amber-500 px-4 py-2 text-center text-sm font-medium tracking-wide text-white transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500 active:opacity-100 active:outline-offset-0">Warning Modal</button>
-    <div x-cloak x-show="warningModalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="warningModalIsOpen" @keydown.esc.window="warningModalIsOpen = false" @click.self="warningModalIsOpen = false" class="fixed inset-0 z-30 flex items-end justify-center bg-black/20 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8" role="dialog" aria-modal="true" aria-labelledby="warningModalTitle">
+    <button x-on:click="warningModalIsOpen = true" type="button" class="w-36 border border-warning whitespace-nowrap rounded-radius bg-warning px-4 py-2 text-center text-sm font-medium tracking-wide text-on-warning transition hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-warning active:opacity-100 active:outline-offset-0">Warning Modal</button>
+    <div x-cloak x-show="warningModalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="warningModalIsOpen" x-on:keydown.esc.window="warningModalIsOpen = false" x-on:click.self="warningModalIsOpen = false" class="fixed inset-0 z-30 flex items-end justify-center bg-black/20 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8" role="dialog" aria-modal="true" aria-labelledby="warningModalTitle">
         <!-- Modal Dialog -->
-        <div x-show="warningModalIsOpen" x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity" x-transition:enter-start="opacity-0 scale-50" x-transition:enter-end="opacity-100 scale-100" class="flex max-w-lg flex-col gap-4 overflow-hidden rounded-md border border-neutral-300 bg-white text-neutral-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">
+        <div x-show="warningModalIsOpen" x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity" x-transition:enter-start="opacity-0 scale-50" x-transition:enter-end="opacity-100 scale-100" class="flex max-w-lg flex-col gap-4 overflow-hidden rounded-radius border border-outline bg-surface text-on-surface dark:border-outline-dark dark:bg-surface-dark-alt dark:text-on-surface-dark">
             <!-- Dialog Header -->
-            <div class="flex items-center justify-between border-b border-neutral-300 bg-neutral-50/60 px-4 py-2 dark:border-neutral-700 dark:bg-neutral-950/20">
-                <div class="flex items-center justify-center rounded-full bg-amber-500/20 text-amber-500 p-1">
+            <div class="flex items-center justify-between border-b border-outline bg-surface-alt/60 px-4 py-2 dark:border-outline-dark dark:bg-surface-dark/20">
+                <div class="flex items-center justify-center rounded-full bg-warning/20 text-warning p-1">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6" aria-hidden="true">
                         <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5Zm0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd" />
                     </svg>
                 </div>
-                <button @click="warningModalIsOpen = false" aria-label="close modal">
+                <button x-on:click="warningModalIsOpen = false" aria-label="close modal">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" stroke="currentColor" fill="none" stroke-width="1.4" class="w-5 h-5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
@@ -83,12 +83,12 @@
             </div>
             <!-- Dialog Body -->
             <div class="px-4 text-center"> 
-                <h3 id="warningModalTitle" class="mb-2 font-semibold tracking-wide text-neutral-900 dark:text-white">Forgot your password?</h3>
+                <h3 id="warningModalTitle" class="mb-2 font-semibold tracking-wide text-on-surface-strong dark:text-on-surface-dark-strong">Forgot your password?</h3>
                 <p>Your account will be locked after three unsuccessful login attempts.</p>
             </div>
             <!-- Dialog Footer -->
-            <div class="flex items-center justify-center border-neutral-300 p-4 dark:border-neutral-700">
-                <button @click="warningModalIsOpen = false" type="button" class="w-full cursor-pointer whitespace-nowrap rounded-md bg-amber-500 px-4 py-2 text-center text-sm font-semibold tracking-wide text-white transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500 active:opacity-100 active:outline-offset-0">Recover My Password</button>
+            <div class="flex items-center justify-center border-outline p-4 dark:border-outline-dark">
+                <button x-on:click="warningModalIsOpen = false" type="button" class="w-full whitespace-nowrap rounded-radius border border-warning bg-warning px-4 py-2 text-center text-sm font-semibold tracking-wide text-on-warning transition hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-warning active:opacity-100 active:outline-offset-0">Recover My Password</button>
             </div>
         </div>
     </div>
@@ -96,18 +96,18 @@
 
 <!-- danger Modal -->
 <div x-data="{ dangerModalIsOpen: false }">
-    <button @click="dangerModalIsOpen = true" type="button" class="w-36 cursor-pointer whitespace-nowrap rounded-md bg-red-500 px-4 py-2 text-center text-sm font-medium tracking-wide text-white transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500 active:opacity-100 active:outline-offset-0">Danger Modal</button>
-    <div x-cloak x-show="dangerModalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="dangerModalIsOpen" @keydown.esc.window="dangerModalIsOpen = false" @click.self="dangerModalIsOpen = false" class="fixed inset-0 z-30 flex items-end justify-center bg-black/20 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8" role="dialog" aria-modal="true" aria-labelledby="dangerModalTitle">
+    <button x-on:click="dangerModalIsOpen = true" type="button" class="w-36 border border-danger whitespace-nowrap rounded-radius bg-danger px-4 py-2 text-center text-sm font-medium tracking-wide text-on-danger transition hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-danger active:opacity-100 active:outline-offset-0">Danger Modal</button>
+    <div x-cloak x-show="dangerModalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="dangerModalIsOpen" x-on:keydown.esc.window="dangerModalIsOpen = false" x-on:click.self="dangerModalIsOpen = false" class="fixed inset-0 z-30 flex items-end justify-center bg-black/20 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8" role="dialog" aria-modal="true" aria-labelledby="dangerModalTitle">
         <!-- Modal Dialog -->
-        <div x-show="dangerModalIsOpen" x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity" x-transition:enter-start="opacity-0 scale-50" x-transition:enter-end="opacity-100 scale-100" class="flex max-w-lg flex-col gap-4 overflow-hidden rounded-md border border-neutral-300 bg-white text-neutral-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">
+        <div x-show="dangerModalIsOpen" x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity" x-transition:enter-start="opacity-0 scale-50" x-transition:enter-end="opacity-100 scale-100" class="flex max-w-lg flex-col gap-4 overflow-hidden rounded-radius border border-outline bg-surface text-on-surface dark:border-outline-dark dark:bg-surface-dark-alt dark:text-on-surface-dark">
             <!-- Dialog Header -->
-            <div class="flex items-center justify-between border-b border-neutral-300 bg-neutral-50/60 px-4 py-2 dark:border-neutral-700 dark:bg-neutral-950/20">
-                <div class="flex items-center justify-center rounded-full bg-red-500/20 text-red-500 p-1">
+            <div class="flex items-center justify-between border-b border-outline bg-surface-alt/60 px-4 py-2 dark:border-outline-dark dark:bg-surface-dark/20">
+                <div class="flex items-center justify-center rounded-full bg-danger/20 text-danger p-1">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6" aria-hidden="true">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM8.28 7.22a.75.75 0 0 0-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 1 0 1.06 1.06L10 11.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L11.06 10l1.72-1.72a.75.75 0 0 0-1.06-1.06L10 8.94 8.28 7.22Z" clip-rule="evenodd" />
                     </svg>
                 </div>
-                <button @click="dangerModalIsOpen = false" aria-label="close modal">
+                <button x-on:click="dangerModalIsOpen = false" aria-label="close modal">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" stroke="currentColor" fill="none" stroke-width="1.4" class="w-5 h-5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
@@ -115,12 +115,12 @@
             </div>
             <!-- Dialog Body -->
             <div class="px-4 text-center"> 
-                <h3 id="dangerModalTitle" class="mb-2 font-semibold tracking-wide text-neutral-900 dark:text-white">Update Required</h3>
+                <h3 id="dangerModalTitle" class="mb-2 font-semibold tracking-wide text-on-surface-strong dark:text-on-surface-dark-strong">Update Required</h3>
                 <p>You are missing critical security updates, putting your system at risk of potential vulnerabilities.</p>
             </div>
             <!-- Dialog Footer -->
-            <div class="flex items-center justify-center border-neutral-300 p-4 dark:border-neutral-700">
-                <button @click="dangerModalIsOpen = false" type="button" class="w-full cursor-pointer whitespace-nowrap rounded-md bg-red-500 px-4 py-2 text-center text-sm font-semibold tracking-wide text-white transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500 active:opacity-100 active:outline-offset-0">Install Updates Now</button>
+            <div class="flex items-center justify-center border-outline p-4 dark:border-outline-dark">
+                <button x-on:click="dangerModalIsOpen = false" type="button" class="w-full whitespace-nowrap rounded-radius border border-danger bg-danger px-4 py-2 text-center text-sm font-semibold tracking-wide text-on-danger transition hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-danger active:opacity-100 active:outline-offset-0">Install Updates Now</button>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-<article class="group flex rounded-md max-w-sm flex-col overflow-hidden border border-neutral-300 bg-neutral-50 text-neutral-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300" style="-webkit-mask-image: -webkit-radial-gradient(white, black)">
+<article class="group flex rounded-radius max-w-sm flex-col overflow-hidden border border-outline bg-surface-alt text-on-surface dark:border-outline-dark dark:bg-surface-dark-alt dark:text-on-surface-dark" style="-webkit-mask-image: -webkit-radial-gradient(white, black)">
     <!-- Carousel -->
     <div class="h-48 md:h-64 overflow-hidden"> 
         <div x-data="{            
@@ -37,14 +37,14 @@
         }" class="relative w-full overflow-hidden">
         
             <!-- previous button -->
-            <button type="button" class="absolute left-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-neutral-600 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:outline-offset-0 dark:bg-neutral-950/40 dark:text-neutral-300 dark:hover:bg-neutral-950/60 dark:focus-visible:outline-white" aria-label="previous slide" x-on:click="previous()">
+            <button type="button" class="absolute left-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-surface/40 p-2 text-on-surface transition hover:bg-surface/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary active:outline-offset-0 dark:bg-surface-dark/40 dark:text-on-surface-dark dark:hover:bg-surface-dark/60 dark:focus-visible:outline-primary-dark" aria-label="previous slide" x-on:click="previous()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="3" class="size-5 md:size-6 pr-0.5" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
             </button>
         
             <!-- next button -->
-            <button type="button" class="absolute right-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-neutral-600 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:outline-offset-0 dark:bg-neutral-950/40 dark:text-neutral-300 dark:hover:bg-neutral-950/60 dark:focus-visible:outline-white" aria-label="next slide" x-on:click="next()">
+            <button type="button" class="absolute right-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-surface/40 p-2 text-on-surface transition hover:bg-surface/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary active:outline-offset-0 dark:bg-surface-dark/40 dark:text-on-surface-dark dark:hover:bg-surface-dark/60 dark:focus-visible:outline-primary-dark" aria-label="next slide" x-on:click="next()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="3" class="size-5 md:size-6 pl-0.5" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
@@ -54,7 +54,7 @@
             <div class="relative h-48 md:h-64 w-full">
                 <template x-for="(slide, index) in slides">
                     <div x-cloak x-show="currentSlideIndex == index + 1" class="absolute inset-0" x-transition.opacity.duration.300ms>
-                        <img class="absolute w-full h-full inset-0 object-cover text-neutral-600 dark:text-neutral-300" x-bind:src="slide.imgSrc" x-bind:alt="slide.imgAlt" />
+                        <img class="absolute w-full h-full inset-0 object-cover text-on-surface dark:text-on-surface-dark" x-bind:src="slide.imgSrc" x-bind:alt="slide.imgAlt" />
                     </div>
                 </template>
             </div>
@@ -67,19 +67,19 @@
         <div class="flex flex-col md:flex-row gap-4 md:gap-12 justify-between">
             <!-- Title -->
             <div class="flex flex-col">
-                <h3 class="text-lg lg:text-xl font-bold text-neutral-900 dark:text-white" aria-describedby="nftDescription">BioHazardApe #343</h3>
+                <h3 class="text-lg lg:text-xl font-bold text-on-surface-strong dark:text-on-surface-dark-strong" aria-describedby="nftDescription">BioHazardApe #343</h3>
             </div>
             <!-- Price -->
-            <span class="w-fit bg-neutral-800 h-fit rounded-md px-2 py-1 text-xs font-medium text-white dark:bg-neutral-300 dark:text-black"><span class="sr-only">price</span>0.45 ETH</span>
+            <span class="w-fit bg-secondary h-fit rounded-radius px-2 py-1 text-xs font-medium text-on-secondary dark:bg-secondary-dark dark:text-on-secondary-dark"><span class="sr-only">price</span>0.45 ETH</span>
         </div>
         <p id="nftDescription" class="mb-2 text-pretty text-sm">
-            by <a href="#" class="text-black dark:text-white">@apeMakers</a>
+            by <a href="#" class="text-primary dark:text-primary-dark">@apeMakers</a>
             <br/>
             <br/>
             BioHazardApe NFT showcases a captivating collection of digital artworks inspired by the wild essence of apes, each piece a gem in the jungle of digital art.
         </p>
         <!-- Button -->
-        <button type="button" class="flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap bg-black px-4 py-2 text-center text-sm font-medium tracking-wide text-neutral-100 transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:opacity-100 active:outline-offset-0 dark:bg-white dark:text-black dark:focus-visible:outline-white rounded-md">
+        <button type="button" class="flex items-center justify-center gap-2 border border-primary whitespace-nowrap bg-primary px-4 py-2 text-center text-sm font-medium tracking-wide text-on-primary transition hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary active:opacity-100 active:outline-offset-0 dark:bg-primary-dark dark:border-primary-dark dark:text-on-primary-dark dark:focus-visible:outline-primary-dark rounded-radius">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" class="size-3.5">
                 <path fill-rule="evenodd" d="M5 4a3 3 0 0 1 6 0v1h.643a1.5 1.5 0 0 1 1.492 1.35l.7 7A1.5 1.5 0 0 1 12.342 15H3.657a1.5 1.5 0 0 1-1.492-1.65l.7-7A1.5 1.5 0 0 1 4.357 5H5V4Zm4.5 0v1h-3V4a1.5 1.5 0 0 1 3 0Zm-3 3.75a.75.75 0 0 0-1.5 0v1a3 3 0 1 0 6 0v-1a.75.75 0 0 0-1.5 0v1a1.5 1.5 0 1 1-3 0v-1Z" clip-rule="evenodd" />
             </svg>

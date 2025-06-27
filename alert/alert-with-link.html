@@ -1,80 +1,103 @@
 <!-- info Alert -->
-<div class="relative w-full overflow-hidden rounded-md border border-sky-500 bg-white text-neutral-600 dark:bg-neutral-950 dark:text-neutral-300" role="alert">
-    <div class="flex w-full items-center gap-2 bg-sky-500/10 p-4">
+<div class="relative w-full overflow-hidden rounded-radius border border-sky-500 bg-surface text-on-surface dark:bg-surface-dark dark:text-on-surface-dark"
+    role="alert">
+    <div class="flex w-full items-center gap-2 bg-info/10 p-4">
         <div class="bg-sky-500/15 text-sky-500 rounded-full p-1" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6" aria-hidden="true">
-                <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z" clip-rule="evenodd" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z"
+                    clip-rule="evenodd" />
             </svg>
         </div>
         <div class="flex w-full flex-col items-center justify-between gap-2 ml-2 sm:flex-row">
-        <div>
-            <h3 class="text-sm font-semibold text-sky-500">Update Available</h3>
-            <p class="text-xs font-medium sm:text-sm">A new version is available. Please update to the latest version.</p>
-        </div>
-        <a href="#" class="whitespace-nowrap ml-auto text-sm font-medium text-sky-500 tracking-wide transition hover:opacity-75 text-center active:opacity-100">
-            Details
-        </a>
+            <div>
+                <h3 class="text-sm font-semibold text-info">Update Available</h3>
+                <p class="text-xs font-medium sm:text-sm">A new version is available. Please update to the latest
+                    version.</p>
+            </div>
+            <a href="#"
+                class="whitespace-nowrap ml-auto text-sm font-medium text-info tracking-wide transition hover:opacity-75 text-center active:opacity-100">
+                Details
+            </a>
         </div>
     </div>
 </div>
 
 <!-- success Alert -->
-<div class="relative w-full overflow-hidden rounded-md border border-green-500 bg-white text-neutral-600 dark:bg-neutral-950 dark:text-neutral-300" role="alert">
-    <div class="flex w-full items-center gap-2 bg-green-500/10 p-4">
+<div class="relative w-full overflow-hidden rounded-radius border border-green-500 bg-surface text-on-surface dark:bg-surface-dark dark:text-on-surface-dark"
+    role="alert">
+    <div class="flex w-full items-center gap-2 bg-success/10 p-4">
         <div class="bg-green-500/15 text-green-500 rounded-full p-1" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z"
+                    clip-rule="evenodd" />
             </svg>
         </div>
         <div class="flex w-full flex-col items-center justify-between gap-2 ml-2 sm:flex-row">
-        <div>
-            <h3 class="text-sm font-semibold text-green-500">Successfully Subscribed</h3>
-            <p class="text-xs font-medium sm:text-sm">Success! You've subscribed to our newsletter. Welcome aboard!</p>
-        </div>
-        <a href="#" class="whitespace-nowrap ml-auto text-sm font-medium text-green-500 tracking-wide transition hover:opacity-75 text-center active:opacity-100">
-            Details
-        </a>
+            <div>
+                <h3 class="text-sm font-semibold text-success">Successfully Subscribed</h3>
+                <p class="text-xs font-medium sm:text-sm">Success! You've subscribed to our newsletter. Welcome aboard!
+                </p>
+            </div>
+            <a href="#"
+                class="whitespace-nowrap ml-auto text-sm font-medium text-success tracking-wide transition hover:opacity-75 text-center active:opacity-100">
+                Details
+            </a>
         </div>
     </div>
 </div>
 
 <!-- warning Alert -->
-<div class="relative w-full overflow-hidden rounded-md border border-amber-500 bg-white text-neutral-600 dark:bg-neutral-950 dark:text-neutral-300" role="alert">
-    <div class="flex w-full items-center gap-2 bg-amber-500/10 p-4">
+<div class="relative w-full overflow-hidden rounded-radius border border-amber-500 bg-surface text-on-surface dark:bg-surface-dark dark:text-on-surface-dark"
+    role="alert">
+    <div class="flex w-full items-center gap-2 bg-warning/10 p-4">
         <div class="bg-amber-500/15 text-amber-500 rounded-full p-1" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6" aria-hidden="true">
-                <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5Zm0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5Zm0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"
+                    clip-rule="evenodd" />
             </svg>
         </div>
         <div class="flex w-full flex-col items-center justify-between gap-2 ml-2 sm:flex-row">
-        <div>
-            <h3 class="text-sm font-semibold text-amber-500">Credit Card Expires Soon</h3>
-            <p class="text-xs font-medium sm:text-sm">Your credit card expires soon. Please update your payment information.</p>
-        </div>
-        <a href="#" class="whitespace-nowrap ml-auto text-sm font-medium text-amber-500 tracking-wide transition hover:opacity-75 text-center active:opacity-100">
-            Details
-        </a>
+            <div>
+                <h3 class="text-sm font-semibold text-warning">Credit Card Expires Soon</h3>
+                <p class="text-xs font-medium sm:text-sm">Your credit card expires soon. Please update your payment
+                    information.</p>
+            </div>
+            <a href="#"
+                class="whitespace-nowrap ml-auto text-sm font-medium text-warning tracking-wide transition hover:opacity-75 text-center active:opacity-100">
+                Details
+            </a>
         </div>
     </div>
 </div>
 
 <!-- danger Alert -->
-<div class="relative w-full overflow-hidden rounded-md border border-red-500 bg-white text-neutral-600 dark:bg-neutral-950 dark:text-neutral-300" role="alert">
-    <div class="flex w-full items-center gap-2 bg-red-500/10 p-4">
+<div class="relative w-full overflow-hidden rounded-radius border border-red-500 bg-surface text-on-surface dark:bg-surface-dark dark:text-on-surface-dark"
+    role="alert">
+    <div class="flex w-full items-center gap-2 bg-danger/10 p-4">
         <div class="bg-red-500/15 text-red-500 rounded-full p-1" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM8.28 7.22a.75.75 0 0 0-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 1 0 1.06 1.06L10 11.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L11.06 10l1.72-1.72a.75.75 0 0 0-1.06-1.06L10 8.94 8.28 7.22Z" clip-rule="evenodd" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM8.28 7.22a.75.75 0 0 0-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 1 0 1.06 1.06L10 11.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L11.06 10l1.72-1.72a.75.75 0 0 0-1.06-1.06L10 8.94 8.28 7.22Z"
+                    clip-rule="evenodd" />
             </svg>
         </div>
         <div class="flex w-full flex-col items-center justify-between gap-2 ml-2 sm:flex-row">
-        <div>
-            <h3 class="text-sm font-semibold text-red-500">Invalid Email Address</h3>
-            <p class="text-xs font-medium sm:text-sm">The email address you entered is invalid. Please try again.</p>
-        </div>
-        <a href="#" class="whitespace-nowrap ml-auto text-sm font-medium text-red-500 tracking-wide transition hover:opacity-75 text-center active:opacity-100">
-            Details
-        </a>
+            <div>
+                <h3 class="text-sm font-semibold text-danger">Invalid Email Address</h3>
+                <p class="text-xs font-medium sm:text-sm">The email address you entered is invalid. Please try again.
+                </p>
+            </div>
+            <a href="#"
+                class="whitespace-nowrap ml-auto text-sm font-medium text-danger tracking-wide transition hover:opacity-75 text-center active:opacity-100">
+                Details
+            </a>
         </div>
     </div>
 </div>
-
