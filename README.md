@@ -25,6 +25,6 @@ This project is licensed under the MIT License - see the [LICENSE](https://www.p
 
 **Created by Salar Houshvand**
 
-[![X](https://img.shields.io/badge/salar_houshvand-1DA1F2?style=for-the-badge&logo=x&logoColor=white)](https://x.com/salar_houshvand)
+[![X](https://img.shields.io/badge/salar_houshvand-000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/salar_houshvand)
 
 </div>
