@@ -1,0 +1,36 @@
+<!-- Primary Progress Bar -->
+<div x-data="{ currentVal: 40 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-md bg-neutral-50 dark:bg-neutral-900" role="progressbar" aria-label="default progress bar" :aria-valuenow="currentVal" :aria-valuemin="minVal" :aria-valuemax="maxVal">
+    <div class="h-full rounded-md bg-black dark:bg-white" :style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`">
+    </div>
+</div>
+
+<!-- Secondary Progress Bar -->
+<div x-data="{ currentVal: 40 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-md bg-neutral-50 dark:bg-neutral-900" role="progressbar" aria-label="default progress bar" :aria-valuenow="currentVal" :aria-valuemin="minVal" :aria-valuemax="maxVal">
+    <div class="h-full rounded-md bg-neutral-800 dark:bg-neutral-300" :style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`">
+    </div>
+</div>
+
+<!-- Success Progress Bar -->
+<div x-data="{ currentVal: 40 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-md bg-neutral-50 dark:bg-neutral-900" role="progressbar" aria-label="default progress bar" :aria-valuenow="currentVal" :aria-valuemin="minVal" :aria-valuemax="maxVal">
+    <div class="h-full rounded-md bg-green-500 dark:bg-undefined" :style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`">
+    </div>
+</div>
+
+<!-- Info Progress Bar -->
+<div x-data="{ currentVal: 40 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-md bg-neutral-50 dark:bg-neutral-900" role="progressbar" aria-label="default progress bar" :aria-valuenow="currentVal" :aria-valuemin="minVal" :aria-valuemax="maxVal">
+    <div class="h-full rounded-md bg-sky-500 dark:bg-undefined" :style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`">
+    </div>
+</div>
+
+<!-- Warning Progress Bar -->
+<div x-data="{ currentVal: 40 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-md bg-neutral-50 dark:bg-neutral-900" role="progressbar" aria-label="default progress bar" :aria-valuenow="currentVal" :aria-valuemin="minVal" :aria-valuemax="maxVal">
+    <div class="h-full rounded-md bg-amber-500 dark:bg-undefined" :style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`">
+    </div>
+</div>
+
+<!-- Danger Progress Bar -->
+<div x-data="{ currentVal: 40 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-md bg-neutral-50 dark:bg-neutral-900" role="progressbar" aria-label="default progress bar" :aria-valuenow="currentVal" :aria-valuemin="minVal" :aria-valuemax="maxVal">
+    <div class="h-full rounded-md bg-red-500 dark:bg-undefined" :style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`">
+    </div>
+</div>
+

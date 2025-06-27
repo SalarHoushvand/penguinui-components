@@ -1,0 +1,4 @@
+<div x-data="{ currentVal: 20 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-2.5 w-full overflow-hidden rounded-md bg-neutral-50 dark:bg-neutral-900" role="progressbar" aria-label="default progress bar" :aria-valuenow="currentVal" :aria-valuemin="minVal" :aria-valuemax="maxVal">
+    <div class="h-full rounded-md bg-black dark:bg-white" :style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`">
+    </div>
+</div>

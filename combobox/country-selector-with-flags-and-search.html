@@ -1,0 +1,318 @@
+<div x-data="{
+    allOptions: [
+        { label: 'Afghanistan', value: 'Afghanistan', iso: 'af' },
+        { label: 'Albania', value: 'Albania', iso: 'al' },
+        { label: 'Algeria', value: 'Algeria', iso: 'dz' },
+        { label: 'Andorra', value: 'Andorra', iso: 'ad' },
+        { label: 'Angola', value: 'Angola', iso: 'ao' },
+        { label: 'Anguilla', value: 'Anguilla', iso: 'ai' },
+        { label: 'Antigua and Barbuda', value: 'Antigua and Barbuda', iso: 'ag' },
+        { label: 'Argentina', value: 'Argentina', iso: 'ar' },
+        { label: 'Armenia', value: 'Armenia', iso: 'am' },
+        { label: 'Aruba', value: 'Aruba', iso: 'aw' },
+        { label: 'Australia', value: 'Australia', iso: 'au' },
+        { label: 'Austria', value: 'Austria', iso: 'at' },
+        { label: 'Azerbaijan', value: 'Azerbaijan', iso: 'az' },
+        { label: 'Bahamas', value: 'Bahamas', iso: 'bs' },
+        { label: 'Bahrain', value: 'Bahrain', iso: 'bh' },
+        { label: 'Bangladesh', value: 'Bangladesh', iso: 'bd' },
+        { label: 'Barbados', value: 'Barbados', iso: 'bb' },
+        { label: 'Belarus', value: 'Belarus', iso: 'by' },
+        { label: 'Belgium', value: 'Belgium', iso: 'be' },
+        { label: 'Belize', value: 'Belize', iso: 'bz' },
+        { label: 'Benin', value: 'Benin', iso: 'bj' },
+        { label: 'Bermuda', value: 'Bermuda', iso: 'bm' },
+        { label: 'Bhutan', value: 'Bhutan', iso: 'bt' },
+        { label: 'Bolivia', value: 'Bolivia', iso: 'bo' },
+        { label: 'Bosnia and Herzegovina', value: 'Bosnia and Herzegovina', iso: 'ba' },
+        { label: 'Botswana', value: 'Botswana', iso: 'bw' },
+        { label: 'Brazil', value: 'Brazil', iso: 'br' },
+        { label: 'British Indian Ocean Territory', value: 'British Indian Ocean Territory', iso: 'io' },
+        { label: 'British Virgin Islands', value: 'British Virgin Islands', iso: 'vg' },
+        { label: 'Brunei', value: 'Brunei', iso: 'bn' },
+        { label: 'Bulgaria', value: 'Bulgaria', iso: 'bg' },
+        { label: 'Burkina Faso', value: 'Burkina Faso', iso: 'bf' },
+        { label: 'Burundi', value: 'Burundi', iso: 'bi' },
+        { label: 'Cambodia', value: 'Cambodia', iso: 'kh' },
+        { label: 'Cameroon', value: 'Cameroon', iso: 'cm' },
+        { label: 'Canada', value: 'Canada', iso: 'ca' },
+        { label: 'Cape Verde', value: 'Cape Verde', iso: 'cv' },
+        { label: 'Cayman Islands', value: 'Cayman Islands', iso: 'ky' },
+        { label: 'Central African Republic', value: 'Central African Republic', iso: 'cf' },
+        { label: 'Chad', value: 'Chad', iso: 'td' },
+        { label: 'Chile', value: 'Chile', iso: 'cl' },
+        { label: 'China', value: 'China', iso: 'cn' },
+        { label: 'Colombia', value: 'Colombia', iso: 'co' },
+        { label: 'Comoros', value: 'Comoros', iso: 'km' },
+        { label: 'Congo (Brazzaville)', value: 'Congo (Brazzaville)', iso: 'cg' },
+        { label: 'Congo (Kinshasa)', value: 'Congo (Kinshasa)', iso: 'cd' },
+        { label: 'Cook Islands', value: 'Cook Islands', iso: 'ck' },
+        { label: 'Costa Rica', value: 'Costa Rica', iso: 'cr' },
+        { label: 'Croatia', value: 'Croatia', iso: 'hr' },
+        { label: 'Cuba', value: 'Cuba', iso: 'cu' },
+        { label: 'Curaçao', value: 'Curaçao', iso: 'cw' },
+        { label: 'Cyprus', value: 'Cyprus', iso: 'cy' },
+        { label: 'Czechia', value: 'Czechia', iso: 'cz' },
+        { label: 'Denmark', value: 'Denmark', iso: 'dk' },
+        { label: 'Djibouti', value: 'Djibouti', iso: 'dj' },
+        { label: 'Dominica', value: 'Dominica', iso: 'dm' },
+        { label: 'Dominican Republic', value: 'Dominican Republic', iso: 'do' },
+        { label: 'Ecuador', value: 'Ecuador', iso: 'ec' },
+        { label: 'Egypt', value: 'Egypt', iso: 'eg' },
+        { label: 'El Salvador', value: 'El Salvador', iso: 'sv' },
+        { label: 'England', value: 'England', iso: 'gb-eng' },
+        { label: 'Equatorial Guinea', value: 'Equatorial Guinea', iso: 'gq' },
+        { label: 'Eritrea', value: 'Eritrea', iso: 'er' },
+        { label: 'Estonia', value: 'Estonia', iso: 'ee' },
+        { label: 'Eswatini (Swaziland)', value: 'Eswatini (Swaziland)', iso: 'sz' },
+        { label: 'Ethiopia', value: 'Ethiopia', iso: 'et' },
+        { label: 'Falkland Islands (Islas Malvinas)', value: 'Falkland Islands (Islas Malvinas)', iso: 'fk' },
+        { label: 'Faroe Islands', value: 'Faroe Islands', iso: 'fo' },
+        { label: 'Fiji', value: 'Fiji', iso: 'fj' },
+        { label: 'Finland', value: 'Finland', iso: 'fi' },
+        { label: 'France', value: 'France', iso: 'fr' },
+        { label: 'French Guiana', value: 'French Guiana', iso: 'gf' },
+        { label: 'French Polynesia', value: 'French Polynesia', iso: 'pf' },
+        { label: 'French Southern and Antarctic Lands', value: 'French Southern and Antarctic Lands', iso: 'tf' },
+        { label: 'Gabon', value: 'Gabon', iso: 'ga' },
+        { label: 'Gambia', value: 'Gambia', iso: 'gm' },
+        { label: 'Georgia', value: 'Georgia', iso: 'ge' },
+        { label: 'Germany', value: 'Germany', iso: 'de' },
+        { label: 'Ghana', value: 'Ghana', iso: 'gh' },
+        { label: 'Gibraltar', value: 'Gibraltar', iso: 'gi' },
+        { label: 'Greece', value: 'Greece', iso: 'gr' },
+        { label: 'Greenland', value: 'Greenland', iso: 'gl' },
+        { label: 'Grenada', value: 'Grenada', iso: 'gd' },
+        { label: 'Guadeloupe', value: 'Guadeloupe', iso: 'gp' },
+        { label: 'Guam', value: 'Guam', iso: 'gu' },
+        { label: 'Guatemala', value: 'Guatemala', iso: 'gt' },
+        { label: 'Guernsey', value: 'Guernsey', iso: 'gg' },
+        { label: 'Guinea', value: 'Guinea', iso: 'gn' },
+        { label: 'Guinea-Bissau', value: 'Guinea-Bissau', iso: 'gw' },
+        { label: 'Guyana', value: 'Guyana', iso: 'gy' },
+        { label: 'Haiti', value: 'Haiti', iso: 'ht' },
+        { label: 'Honduras', value: 'Honduras', iso: 'hn' },
+        { label: 'Hong Kong', value: 'Hong Kong', iso: 'hk' },
+        { label: 'Hungary', value: 'Hungary', iso: 'hu' },
+        { label: 'Iceland', value: 'Iceland', iso: 'is' },
+        { label: 'India', value: 'India', iso: 'in' },
+        { label: 'Indonesia', value: 'Indonesia', iso: 'id' },
+        { label: 'Iran', value: 'Iran', iso: 'ir' },
+        { label: 'Iraq', value: 'Iraq', iso: 'iq' },
+        { label: 'Ireland', value: 'Ireland', iso: 'ie' },
+        { label: 'Isle of Man', value: 'Isle of Man', iso: 'im' },
+        { label: 'Israel', value: 'Israel', iso: 'il' },
+        { label: 'Italy', value: 'Italy', iso: 'it' },
+        { label: 'Ivory Coast', value: 'Ivory Coast', iso: 'ci' },
+        { label: 'Jamaica', value: 'Jamaica', iso: 'jm' },
+        { label: 'Japan', value: 'Japan', iso: 'jp' },
+        { label: 'Jersey', value: 'Jersey', iso: 'je' },
+        { label: 'Jordan', value: 'Jordan', iso: 'jo' },
+        { label: 'Kazakhstan', value: 'Kazakhstan', iso: 'kz' },
+        { label: 'Kenya', value: 'Kenya', iso: 'ke' },
+        { label: 'Kiribati', value: 'Kiribati', iso: 'ki' },
+        { label: 'Kosovo', value: 'Kosovo', iso: 'xk' },
+        { label: 'Kuwait', value: 'Kuwait', iso: 'kw' },
+        { label: 'Kyrgyzstan', value: 'Kyrgyzstan', iso: 'kg' },
+        { label: 'Laos', value: 'Laos', iso: 'la' },
+        { label: 'Latvia', value: 'Latvia', iso: 'lv' },
+        { label: 'Lebanon', value: 'Lebanon', iso: 'lb' },
+        { label: 'Lesotho', value: 'Lesotho', iso: 'ls' },
+        { label: 'Liberia', value: 'Liberia', iso: 'lr' },
+        { label: 'Libya', value: 'Libya', iso: 'ly' },
+        { label: 'Liechtenstein', value: 'Liechtenstein', iso: 'li' },
+        { label: 'Lithuania', value: 'Lithuania', iso: 'lt' },
+        { label: 'Luxembourg', value: 'Luxembourg', iso: 'lu' },
+        { label: 'Macao', value: 'Macao', iso: 'mo' },
+        { label: 'Madagascar', value: 'Madagascar', iso: 'mg' },
+        { label: 'Malawi', value: 'Malawi', iso: 'mw' },
+        { label: 'Malaysia', value: 'Malaysia', iso: 'my' },
+        { label: 'Maldives', value: 'Maldives', iso: 'mv' },
+        { label: 'Mali', value: 'Mali', iso: 'ml' },
+        { label: 'Malta', value: 'Malta', iso: 'mt' },
+        { label: 'Marshall Islands', value: 'Marshall Islands', iso: 'mh' },
+        { label: 'Martinique', value: 'Martinique', iso: 'mq' },
+        { label: 'Mauritania', value: 'Mauritania', iso: 'mr' },
+        { label: 'Mauritius', value: 'Mauritius', iso: 'mu' },
+        { label: 'Mayotte', value: 'Mayotte', iso: 'yt' },
+        { label: 'Mexico', value: 'Mexico', iso: 'mx' },
+        { label: 'Micronesia', value: 'Micronesia', iso: 'fm' },
+        { label: 'Moldova', value: 'Moldova', iso: 'md' },
+        { label: 'Monaco', value: 'Monaco', iso: 'mc' },
+        { label: 'Mongolia', value: 'Mongolia', iso: 'mn' },
+        { label: 'Montenegro', value: 'Montenegro', iso: 'me' },
+        { label: 'Montserrat', value: 'Montserrat', iso: 'ms' },
+        { label: 'Morocco', value: 'Morocco', iso: 'ma' },
+        { label: 'Mozambique', value: 'Mozambique', iso: 'mz' },
+        { label: 'Myanmar (Burma)', value: 'Myanmar (Burma)', iso: 'mm' },
+        { label: 'Namibia', value: 'Namibia', iso: 'na' },
+        { label: 'Nauru', value: 'Nauru', iso: 'nr' },
+        { label: 'Nepal', value: 'Nepal', iso: 'np' },
+        { label: 'Netherlands', value: 'Netherlands', iso: 'nl' },
+        { label: 'New Caledonia', value: 'New Caledonia', iso: 'nc' },
+        { label: 'New Zealand', value: 'New Zealand', iso: 'nz' },
+        { label: 'Nicaragua', value: 'Nicaragua', iso: 'ni' },
+        { label: 'Niger', value: 'Niger', iso: 'ne' },
+        { label: 'Nigeria', value: 'Nigeria', iso: 'ng' },
+        { label: 'Niue', value: 'Niue', iso: 'nu' },
+        { label: 'Norfolk Island', value: 'Norfolk Island', iso: 'nf' },
+        { label: 'North Korea', value: 'North Korea', iso: 'kp' },
+        { label: 'North Macedonia', value: 'North Macedonia', iso: 'mk' },
+        { label: 'Northern Ireland', value: 'Northern Ireland', iso: 'gb-nir' },
+        { label: 'Northern Mariana Islands', value: 'Northern Mariana Islands', iso: 'mp' },
+        { label: 'Norway', value: 'Norway', iso: 'no' },
+        { label: 'Oman', value: 'Oman', iso: 'om' },
+        { label: 'Pakistan', value: 'Pakistan', iso: 'pk' },
+        { label: 'Palau', value: 'Palau', iso: 'pw' },
+        { label: 'Palestine', value: 'Palestine', iso: 'ps' },
+        { label: 'Panama', value: 'Panama', iso: 'pa' },
+        { label: 'Papua New Guinea', value: 'Papua New Guinea', iso: 'pg' },
+        { label: 'Paraguay', value: 'Paraguay', iso: 'py' },
+        { label: 'Peru', value: 'Peru', iso: 'pe' },
+        { label: 'Philippines', value: 'Philippines', iso: 'ph' },
+        { label: 'Pitcairn Islands', value: 'Pitcairn Islands', iso: 'pn' },
+        { label: 'Poland', value: 'Poland', iso: 'pl' },
+        { label: 'Portugal', value: 'Portugal', iso: 'pt' },
+        { label: 'Puerto Rico', value: 'Puerto Rico', iso: 'pr' },
+        { label: 'Qatar', value: 'Qatar', iso: 'qa' },
+        { label: 'Romania', value: 'Romania', iso: 'ro' },
+        { label: 'Russia', value: 'Russia', iso: 'ru' },
+        { label: 'Rwanda', value: 'Rwanda', iso: 'rw' },
+        { label: 'Saint Helena, Ascension and Tristan da Cunha', value: 'Saint Helena, Ascension and Tristan da Cunha', iso: 'sh' },
+        { label: 'Saint Kitts and Nevis', value: 'Saint Kitts and Nevis', iso: 'kn' },
+        { label: 'Saint Lucia', value: 'Saint Lucia', iso: 'lc' },
+        { label: 'Saint Pierre and Miquelon', value: 'Saint Pierre and Miquelon', iso: 'pm' },
+        { label: 'Saint Vincent and the Grenadines', value: 'Saint Vincent and the Grenadines', iso: 'vc' },
+        { label: 'Samoa', value: 'Samoa', iso: 'ws' },
+        { label: 'San Marino', value: 'San Marino', iso: 'sm' },
+        { label: 'Sao Tome and Principe', value: 'Sao Tome and Principe', iso: 'st' },
+        { label: 'Saudi Arabia', value: 'Saudi Arabia', iso: 'sa' },
+        { label: 'Scotland', value: 'Scotland', iso: 'gb-sct' },
+        { label: 'Senegal', value: 'Senegal', iso: 'sn' },
+        { label: 'Serbia', value: 'Serbia', iso: 'rs' },
+        { label: 'Seychelles', value: 'Seychelles', iso: 'sc' },
+        { label: 'Sierra Leone', value: 'Sierra Leone', iso: 'sl' },
+        { label: 'Singapore', value: 'Singapore', iso: 'sg' },
+        { label: 'Sint Maarten', value: 'Sint Maarten', iso: 'sx' },
+        { label: 'Slovakia', value: 'Slovakia', iso: 'sk' },
+        { label: 'Slovenia', value: 'Slovenia', iso: 'si' },
+        { label: 'Solomon Islands', value: 'Solomon Islands', iso: 'sb' },
+        { label: 'Somalia', value: 'Somalia', iso: 'so' },
+        { label: 'South Africa', value: 'South Africa', iso: 'za' },
+        { label: 'South Korea', value: 'South Korea', iso: 'kr' },
+        { label: 'South Sudan', value: 'South Sudan', iso: 'ss' },
+        { label: 'Spain', value: 'Spain', iso: 'es' },
+        { label: 'Sri Lanka', value: 'Sri Lanka', iso: 'lk' },
+        { label: 'Sudan', value: 'Sudan', iso: 'sd' },
+        { label: 'Suriname', value: 'Suriname', iso: 'sr' },
+        { label: 'Svalbard and Jan Mayen', value: 'Svalbard and Jan Mayen', iso: 'sj' },
+        { label: 'Sweden', value: 'Sweden', iso: 'se' },
+        { label: 'Switzerland', value: 'Switzerland', iso: 'ch' },
+        { label: 'Syria', value: 'Syria', iso: 'sy' },
+        { label: 'Taiwan', value: 'Taiwan', iso: 'tw' },
+        { label: 'Tajikistan', value: 'Tajikistan', iso: 'tj' },
+        { label: 'Tanzania', value: 'Tanzania', iso: 'tz' },
+        { label: 'Thailand', value: 'Thailand', iso: 'th' },
+        { label: 'Timor-Leste', value: 'Timor-Leste', iso: 'tl' },
+        { label: 'Togo', value: 'Togo', iso: 'tg' },
+        { label: 'Tokelau', value: 'Tokelau', iso: 'tk' },
+        { label: 'Tonga', value: 'Tonga', iso: 'to' },
+        { label: 'Trinidad and Tobago', value: 'Trinidad and Tobago', iso: 'tt' },
+        { label: 'Tunisia', value: 'Tunisia', iso: 'tn' },
+        { label: 'Turkey', value: 'Turkey', iso: 'tr' },
+        { label: 'Turkmenistan', value: 'Turkmenistan', iso: 'tm' },
+        { label: 'Turks and Caicos Islands', value: 'Turks and Caicos Islands', iso: 'tc' },
+        { label: 'Tuvalu', value: 'Tuvalu', iso: 'tv' },
+        { label: 'Uganda', value: 'Uganda', iso: 'ug' },
+        { label: 'Ukraine', value: 'Ukraine', iso: 'ua' },
+        { label: 'United Arab Emirates', value: 'United Arab Emirates', iso: 'ae' },
+        { label: 'United Kingdom', value: 'United Kingdom', iso: 'gb' },
+        { label: 'United States of America', value: 'United States of America', iso: 'us' },
+        { label: 'Uruguay', value: 'Uruguay', iso: 'uy' },
+        { label: 'Uzbekistan', value: 'Uzbekistan', iso: 'uz' },
+        { label: 'Vanuatu', value: 'Vanuatu', iso: 'vu' },
+        { label: 'Vatican City (Holy See)', value: 'Vatican City (Holy See)', iso: 'va' },
+        { label: 'Venezuela', value: 'Venezuela', iso: 've' },
+        { label: 'Vietnam', value: 'Vietnam', iso: 'vn' },
+        { label: 'Wales', value: 'Wales', iso: 'gb-wls' },
+        { label: 'Western Sahara', value: 'Western Sahara', iso: 'eh' },
+        { label: 'Yemen', value: 'Yemen', iso: 'ye' },
+        { label: 'Zambia', value: 'Zambia', iso: 'zm' },
+        { label: 'Zimbabwe', value: 'Zimbabwe', iso: 'zw' },
+    ],
+    options: [],
+    isOpen: false,
+    openedWithKeyboard: false,
+    selectedOption: null,
+    setSelectedOption(option) {
+        this.selectedOption = option
+        this.isOpen = false
+        this.openedWithKeyboard = false
+        this.$refs.hiddenTextField.value = option.value
+    },
+    getFilteredOptions(query) {
+        this.options = this.allOptions.filter((option) =>
+            option.label.toLowerCase().includes(query.toLowerCase()),
+        )
+        if (this.options.length === 0) {
+            this.$refs.noResultsMessage.classList.remove('hidden')
+        } else {
+            this.$refs.noResultsMessage.classList.add('hidden')
+        }
+    },
+    handleKeydownOnOptions(event) {
+        // if the user presses backspace or the alpha-numeric keys, focus on the search field
+        if ((event.keyCode >= 65 && event.keyCode <= 90) || (event.keyCode >= 48 && event.keyCode <= 57) || event.keyCode === 8) {
+            this.$refs.searchField.focus()
+        }
+    },
+}" class="flex w-full max-w-xs flex-col gap-1" x-on:keydown="handleKeydownOnOptions($event)" x-on:keydown.esc.window="isOpen = false, openedWithKeyboard = false" x-init="options = allOptions">
+<label for="country" class="w-fit pl-0.5 text-sm text-neutral-600 dark:text-neutral-300">Country</label>
+<div class="relative">
+
+    <!-- trigger button  -->
+    <button type="button" class="inline-flex w-full items-center justify-between gap-2 border border-neutral-300 rounded-md bg-neutral-50 px-4 py-2 text-sm font-medium tracking-wide text-neutral-600 transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black dark:border-neutral-700 dark:bg-neutral-900/50 dark:text-neutral-300 dark:focus-visible:outline-white" role="combobox" aria-controls="countriesList" aria-haspopup="listbox" x-on:click="isOpen = ! isOpen" x-on:keydown.down.prevent="openedWithKeyboard = true" x-on:keydown.enter.prevent="openedWithKeyboard = true" x-on:keydown.space.prevent="openedWithKeyboard = true" x-bind:aria-expanded="isOpen || openedWithKeyboard" x-bind:aria-label="selectedOption ? selectedOption.value : 'Please Select'" >
+        <span class="text-sm font-normal" x-text="selectedOption ? selectedOption.value : 'Please Select'"></span>
+        <!-- Chevron  -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"class="size-5" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/>
+        </svg>
+    </button>
+
+    <!-- Hidden Input To Grab The Selected Value  -->
+    <input id="country" name="country" autocomplete="off" x-ref="hiddenTextField" hidden=""/>
+    <div x-show="isOpen || openedWithKeyboard" id="countriesList" class="absolute left-0 top-11 z-10 w-full overflow-hidden rounded-md border border-neutral-300 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900" role="listbox" aria-label="countries list" x-on:click.outside="isOpen = false, openedWithKeyboard = false" x-on:keydown.down.prevent="$focus.wrap().next()" x-on:keydown.up.prevent="$focus.wrap().previous()" x-transition x-trap="openedWithKeyboard">
+
+        <!-- Search  -->
+        <div class="relative">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5" class="absolute left-4 top-1/2 size-5 -translate-y-1/2 text-neutral-600/50 dark:text-neutral-300/50" aria-hidden="true" >
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/>
+            </svg>
+            <input type="text" class="w-full border-b borderneutral-300 bg-neutral-50 py-2.5 pl-11 pr-4 text-sm text-neutral-600 focus:outline-none focus-visible:border-black disabled:cursor-not-allowed disabled:opacity-75 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:focus-visible:border-white" name="searchField" aria-label="Search" x-on:input="getFilteredOptions($el.value)" x-ref="searchField" placeholder="Search" />
+        </div>
+
+        <!-- Options  -->
+        <ul class="flex max-h-44 flex-col overflow-y-auto">
+            <li class="hidden px-4 py-2 text-sm text-neutral-600 dark:text-neutral-300" x-ref="noResultsMessage">
+                <span>No matches found</span>
+            </li>
+            <template x-for="(item, index) in options" x-bind:key="item.value">
+                <li class="combobox-option inline-flex cursor-pointer justify-between gap-6 bg-neutral-50 px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-900/5 hover:text-neutral-900 focus-visible:bg-neutral-900/5 focus-visible:text-neutral-900 focus-visible:outline-none dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-50/5 dark:hover:text-white dark:focus-visible:bg-neutral-50/10 dark:focus-visible:text-white" role="option" x-on:click="setSelectedOption(item)" x-on:keydown.enter="setSelectedOption(item)" x-bind:id="'option-' + index" tabindex="0">
+                    <div class="flex items-center gap-2">
+                        <!-- Flag image  -->
+                        <img class="w-5 h-3.5" x-bind:src="'https://flagcdn.com/' + item.iso + '.svg'" alt="" aria-hidden="true"/>
+                        <!-- Country name  -->
+                        <span x-bind:class="selectedOption == item ? 'font-bold' : null" x-text="item.label"></span>
+                        <!-- Screen reader 'selected' indicator  -->
+                        <span class="sr-only" x-text="selectedOption == item ? 'selected' : null"></span>
+                    </div>
+                    <!-- Checkmark  -->
+                    <svg x-cloak x-show="selectedOption == item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" class="size-4" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5">
+                    </svg>
+                </li>
+            </template>
+        </ul>
+    </div>
+</div>
+</div>

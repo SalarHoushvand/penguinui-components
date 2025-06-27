@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    @theme {
+
+        /* Fonts */
+        --font-body: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+            'Segoe UI Symbol', 'Noto Color Emoji';
+        --font-title: 'Montserrat', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+            'Segoe UI Symbol', 'Noto Color Emoji';
+
+
+        /* Light Theme */
+        --color-surface: var(--color-white);
+        --color-surface-alt: var(--color-neutral-50);
+        --color-on-surface: var(--color-neutral-600);
+        --color-on-surface-strong: var(--color-neutral-900);
+        --color-primary: var(--color-black);
+        --color-on-primary: var(--color-neutral-100);
+        --color-secondary: var(--color-neutral-800);
+        --color-on-secondary: var(--color-white);
+        --color-outline: var(--color-neutral-300);
+        --color-outline-strong: var(--color-neutral-800);
+
+        /* Dark Theme */
+        --color-surface-dark: var(--color-neutral-950);
+        --color-surface-dark-alt: var(--color-neutral-900);
+        --color-on-surface-dark: var(--color-neutral-300);
+        --color-on-surface-dark-strong: var(--color-white);
+        --color-primary-dark: var(--color-white);
+        --color-on-primary-dark: var(--color-black);
+        --color-secondary-dark: var(--color-neutral-300);
+        --color-on-secondary-dark: var(--color-black);
+        --color-outline-dark: var(--color-neutral-700);
+        --color-outline-dark-strong: var(--color-neutral-300);
+
+        /* Shared Colors */
+        --color-info: var(--color-sky-500);
+        --color-on-info: var(--color-white);
+        --color-success: var(--color-green-500);
+        --color-on-success: var(--color-white);
+        --color-warning: var(--color-amber-500);
+        --color-on-warning: var(--color-white);
+        --color-danger: var(--color-red-500);
+        --color-on-danger: var(--color-white);
+
+        /* Border Radius */
+        --radius-radius: var(--radius-sm);
+    }
+}
